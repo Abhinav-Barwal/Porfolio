@@ -1,0 +1,28 @@
+@use '../variable' as *;
+
+.primary-btn {
+    padding: 10px 20px;
+    color: $text-white;
+    text-align: center;
+    font-weight: 500;
+    &:hover {
+        background-color: $bg-light;
+        color: $text-dark;
+        border-radius: 20px;
+    }
+}
+.secondary-btn {
+    padding: 6px 30px;
+    font-weight: 500;
+    color: $text-white;
+    border: 2px solid $bg-light;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease-in-out;
+    &:hover {
+        border: 2px solid $bg-light;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        transition: 0.5s ease-in-out;
+    }
+}

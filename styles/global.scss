@@ -1,0 +1,21 @@
+// Variables
+@use './variable' as *;
+
+// Base
+@use './base/reset';
+@use './base/buttons';
+
+//Components
+
+// Layouts
+@use './components/layouts/header';
+@use './components/layouts/footer';
+
+// Sections
+@use './components/sections/hero';
+@use './components/sections/devJourney';
+@use './components/sections/about';
+@use './components/sections/skills';
+@use './components/sections/portfolio';
+@use './components/sections/contact';
+@use './components/sections/popup';

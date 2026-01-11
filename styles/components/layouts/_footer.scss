@@ -1,0 +1,43 @@
+@use '../../variable' as *;
+
+#footer {
+    background-color: $bg-dark;
+    .container {
+        padding-block: 66px;
+        .to-top {
+            @include flex-center;
+            a {
+                display: flex;
+                flex-direction: column;
+                letter-spacing: 2px;
+                font-weight: 500;
+                color: $text-white;
+                text-decoration: none;
+                i {
+                    color: $text-white;
+                    font-size: 20px;
+                    margin: 0 auto 10px auto;
+                }
+            }
+        }
+        .social-container {
+            
+            @include flex-center;
+            gap: 20px;
+            font-size: 30px;
+            padding-block: 30px;
+            a {
+                color: $text-white;
+            }
+        }
+        .copy-right {
+            p {
+                text-align: center;
+                color: $text-white;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@use '../../variable' as *;
+
+#hero {
+    padding-top: 64px;
+    .hero-info {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-inline: 12px;
+        h3 {
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-bottom: 12px
+        }
+        p {
+            color: $text-grey;
+            font-weight: 500;
+            margin-bottom: 10%;
+        }
+        .social-tabs {
+            display: flex;
+            gap: 30px;
+            .mail-tab {
+                padding: 10px;
+                background-color: $dark-grey;
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                color: $text-dark;
+                i {
+                    font-size: 25px;
+                }
+            }
+            .git-tab {
+                padding: 10px;
+                background-color: $dark-grey;
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                color: $text-dark;
+                i {
+                    font-size: 25px;
+                }
+            }
+            .linkedIn-tab {
+                padding: 10px;
+                background-color: $dark-grey;
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                color: $text-dark;
+                i {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .hero-img {
+        width: 45%;
+        background-color: $bg-dark;
+        padding-inline: 12px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -119px;
+            width: 120px;
+            height: 100%;
+            background: #000;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+        img {
+            display: block;
+        }
+    }
+}

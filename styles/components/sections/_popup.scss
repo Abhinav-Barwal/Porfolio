@@ -1,0 +1,75 @@
+@use '../../variable' as *;
+
+body {
+    // overflow: hidden;
+    .popup {
+        inset: 0;
+        background-color: $bg-overlayDark;
+        position: fixed;
+        z-index: 9999;
+        @include flex-center;
+        &.success .inner-container {
+            border: 1px solid $text-green;
+            .cancel-btn {
+                color: $text-green;
+            }
+            .message {
+                color: $text-green;
+                font-size: 18px;
+                margin: 0;
+                i {
+                    color: $text-green;
+                    font-size: 18px;
+                }
+            }
+        }
+        &.error .inner-container {
+            border: 1px solid $text-red;
+            .cancel-btn {
+                color: $text-red;
+            }
+            .message {
+                color: $text-red;
+                font-size: 18px;
+                margin: 0;
+                i {
+                    color: $text-red;
+                    font-size: 18px;
+                }
+            }
+        }
+        .inner-container {
+            background-color: $bg-light;
+            padding: 25px 30px;
+            max-width: 400px;
+            min-height: 130px;
+            width: 100%;
+            box-shadow: 0 10px 25px $box-shadow;
+            @include flex-center;
+            position: relative;
+            z-index: 1;
+            border: 1px solid $text-green;
+            .cancel-btn {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    transition: 0.3s ease-in-out;
+                    color: $text-grey;
+                }
+            }
+            // .message {
+            //     color: $text-green;
+            //     font-size: 18px;
+            //     margin: 0;
+            //     i {
+            //         color: $text-green;
+            //         font-size: 20px;
+            //     }
+            // }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use '../../variable' as *;
+
+#about {
+    padding-top: 66px;
+    scroll-margin: 64px;
+    .container {
+        .title {
+            text-align: center;
+            h2 {
+                display: inline-block;
+                border: 4px solid $border-dark;
+                padding: 15 50px;
+                margin-bottom: 60px;
+                letter-spacing: 5px;
+            }
+        }
+        .about-info {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .explore-btn {
+            text-align: center;
+            width: 100%;
+        }
+        .secondary-btn {
+            margin-block: 30px;
+            @include btn-dark;
+        }
+        .seperator {
+            text-align: center;
+            @include flex-center;
+            padding-block: 60px;
+        }
+        .abilities {
+            .box {
+                width: 50%;
+                text-align: left;
+                padding: 10px 20px 10px 35px;
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+            .design {
+                background-image: url(/images/design.png);
+                background-repeat: no-repeat;
+            }
+            .development {
+                background-image: url(/images/development.png);
+                background-repeat: no-repeat;
+            }
+            .maintenance {
+                background-image: url(/images/maintenance.png);
+                background-repeat: no-repeat;
+                padding: 20px 20px 10px 60px; 
+
+            }
+        }
+    }
+}

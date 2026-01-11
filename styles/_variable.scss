@@ -1,0 +1,48 @@
+$primary-color: #D7D7D7;
+$text-white: #ffffff;
+$text-light: #7C7C7C;
+$text-grey: #909090;
+$text-dark: #000000;
+$text-green: green;
+$text-red: red;
+$grey-color: #AAAAAA;
+$light-black: #1D1D1D;
+$dark-grey: #C4C4C4;
+$bg-dark: #000000;
+$bg-darkTrans: #000000ad;
+$bg-lightDark: #1a1a1aad;
+$bg-overlayDark: rgba(0, 0, 0, 0.582);
+$bg-light: #ffffff;
+$border-dark: #000000;
+$border-light: #ffffff;
+$box-shadow: rgba(255, 255, 255, 0.336);
+
+// Mixins
+@mixin container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin btn-dark {
+    color: $text-dark;
+    border: 2px solid $bg-dark;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease-in-out;
+    &:hover {
+        border: 2px solid $bg-dark;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        transition: 0.5s ease-in-out;
+    }
+}
