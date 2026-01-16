@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "@/styles/global.scss"
+import "@/styles/global.scss";
 import {Montserrat} from "next/font/google";
 import Header from "@/components/layout/Header";
 import AOSWrapper from "./AOSWrapper";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ["400", "500", "600", "700"],
-})
+}) 
 
 export default function RootLayout({
   children,
