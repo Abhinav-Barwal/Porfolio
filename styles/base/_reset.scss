@@ -43,6 +43,19 @@ section {
 .container-fluid {
   width: 100%;
 }
+.seperator {
+    @include flex-center;
+    padding-block: 60px;
+    @media screen and (max-width: 992px) {
+        padding-block: 35px;
+    }
+    @media screen and (max-width: 768px) {
+        padding-block: 25px;
+    }
+    @media screen and (max-width: 576px) {
+        padding-block: 15px;
+    }
+}
 h1 {
   font-size: 46px;
   font-weight: 600;

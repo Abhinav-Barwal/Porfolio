@@ -5,20 +5,38 @@
     .container {
         color: $text-white;
         max-width: 1250px;
+        @media screen and (max-width: 768px) {
+            background-image: url("/images/mobileITB.png");
+            background-size: auto 270px;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
         .journey-info {
             width: 80%;
             padding: 20px;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             h3 {
                 margin-bottom: 20px;
-                font-weight: 500    ;
+                font-weight: 500;
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
             }
             .journey-cont {
                 margin-bottom: 30px;
                 display: -webkit-box;
-                -webkit-line-clamp: 3;
+                -webkit-line-clamp: 5;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                @media screen and (max-width: 768px) {
+                    text-align :start;
+                }
+            }
+            .readMore-btn {
+                text-align: center;
             }
             &.readMore {
                 width: 100%;
@@ -31,6 +49,9 @@
             overflow: hidden;
             max-height: 246px;
             height: 100%;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 }

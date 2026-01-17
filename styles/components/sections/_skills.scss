@@ -4,11 +4,6 @@
     padding-bottom: 60px;
     scroll-margin: -15px;
     .container {
-        .seperator {
-            text-align: center;
-            @include flex-center;
-            padding-block: 60px;
-        }
         .title {
             text-align: center;
             margin-top: 20px;
@@ -24,6 +19,9 @@
             letter-spacing: 8px;
             margin-bottom: 8%;
             padding-left: 8%;
+            @media screen and (max-width: 576px) {
+                text-align: center;
+            }
         }
         .skills-cont {
             display: grid;
