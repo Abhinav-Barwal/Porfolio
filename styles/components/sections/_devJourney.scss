@@ -9,7 +9,7 @@
             background-image: url("/images/mobileITB.png");
             background-size: auto 270px;
             background-repeat: no-repeat;
-            background-position: center; 
+            background-position: center;
         }
         .journey-info {
             width: 80%;
@@ -36,7 +36,9 @@
                 }
             }
             .readMore-btn {
-                text-align: center;
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
             }
             &.readMore {
                 width: 100%;

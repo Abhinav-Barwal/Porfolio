@@ -39,14 +39,20 @@
                 cursor: pointer;
             }
             .toggle-dropdown {
-                position: absolute;
-                top: 47px;
-                right: -12px;
+                position: fixed;
+                top: 60px;
+                right: 0px;
                 background-color: $bg-light;
                 width: 300px;
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
+                transform: translateX(100%);
+                transition: 0.3s ease-in-out;
+                z-index: 5;
+                &.toggle-transition {
+                    transform: translateX(0%);
+                }
                 .toggle-tab {
                     text-decoration: none;
                     color: $text-dark;
@@ -101,6 +107,19 @@
                 .copy-right {
                     text-align: center;
                     margin-top: 10px;
+                }
+            }
+            .toggle-overlay {
+                position: fixed;
+                inset: 0;
+                top: 60px;
+                background-color: #00000079;
+                z-index: 4;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                &.show {
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }

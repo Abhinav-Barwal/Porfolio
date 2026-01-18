@@ -1,10 +1,13 @@
 "use client"
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
 
-    const [toggle, setToggle] = useState(true)
+    const [toggle, setToggle] = useState(true);
+    useEffect(() => {
+    document.body.style.overflow = toggle ? "auto" : "hidden";
+    }, [toggle]);
     const HandelToggle = () => {
         if (toggle !== false) {
             setToggle(false)
@@ -32,7 +35,7 @@ export default function Header() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" className="bi bi-list toggle-icon" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                     </svg>
-                    <div className={`toggle-dropdown ${toggle? "d-none" : ""}`}>
+                    <div className={`toggle-dropdown ${toggle? "" : "toggle-transition"}`}>
                         <Link href="#about" className="toggle-tab">About me</Link>
                         <Link href="#skills" className="toggle-tab">Skills</Link>
                         <Link href="#portfolio" className="toggle-tab">Portfolio</Link>
@@ -58,6 +61,7 @@ export default function Header() {
                             <p><span>@2025 Abhinav Barwal</span> All Rights Reserved.</p>
                         </div>
                     </div>
+                    <div className={`toggle-overlay ${toggle? "" : 'show'}`} onClick={() => setToggle(false)}></div>
                 </div>
             </div>
         </div>
